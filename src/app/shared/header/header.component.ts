@@ -4,6 +4,8 @@ import { debounceTime, fromEvent } from 'rxjs';
 import { AuthService } from 'src/app/modules/auth/service/auth.service';
 import { CartService } from 'src/app/modules/tienda-guest/service/cart.service';
 import { TiendaGuestService } from 'src/app/modules/tienda-guest/service/tienda-guest.service';
+import { environment } from 'src/environments/environment';
+
 
 declare function cartSidenav():any;
 declare function alertSuccess([]):any;
@@ -24,6 +26,7 @@ export class HeaderComponent implements OnInit, AfterViewInit{
   @ViewChild("filter") filter?:ElementRef;
   source:any;
   listCourse:any = [];
+  URL_BACKEND = environment.URL_BACKEND;
   constructor(
     public authService: AuthService,
     public cartService: CartService,

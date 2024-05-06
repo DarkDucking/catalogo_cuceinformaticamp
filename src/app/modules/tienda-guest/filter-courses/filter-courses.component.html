@@ -273,14 +273,12 @@
                                         </div>
                                         
                                     </div>
-                                    <h4 class="rbt-card-title"><a [routerLink]="['landing-curso/',COURSE.slug]">{{ COURSE.title }}</a>
-                                    </h4>
+                                    <h4 class="rbt-card-title"><a [routerLink]="['/landing-curso', COURSE.slug]">{{ COURSE.title }}</a></h4>
                                     <p class="rbt-card-text">{{ COURSE.subtitle }}.</p>
                                    
                                     <ul class="rbt-meta">
                                         <li><i class="feather-book"></i>{{ COURSE.count_class }} Clases</li>
                                         <li><i class="feather-users"></i>{{ COURSE.count_students }} Estudiantes</li>
-                                        <li><i class="feather-play"></i>{{ COURSE.time_course }}</li>
                                         <li><i class=""></i>Semestre n°{{ COURSE.level }}</li>
                                     </ul>
                                     <div class="rbt-author-meta mb--20">
